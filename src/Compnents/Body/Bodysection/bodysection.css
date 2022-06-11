@@ -1,6 +1,6 @@
 .project-section {
     border: 1px solid var(--Dark-gray);
-    padding: 1em;
+    padding: 2em;
     margin-block: 2em;
     border-radius: 1em;
 }
@@ -23,6 +23,9 @@
     font-weight: 700;
     margin-right: 0.5em;
 }
+.patreon-left span:last-of-type {
+   color: var(--Dark-gray);
+}
 
 .patreon-left button {
     margin-top: 1em;
@@ -42,10 +45,7 @@
 }
 
 @media (min-width:520px) {
-    .project-section {
-        padding: 1em 2em;
-    }
-
+    
     .patreon-left {
         display: flex;
         justify-content: space-between;

@@ -85,7 +85,7 @@
 }
 
 .section-content input:checked .section-content {
-    border: 1px solid red;
+    border: 1px solid var(--Dark-cyan);
 }
 
 .section-bottom span {
@@ -93,6 +93,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 1em;
+    max-width: 250px;
+    margin-inline: auto;
 }
 
 .section-bottom input[type='number'] {
@@ -171,8 +173,8 @@ input[type=number] {
     }
     .section-bottom span {
         display: flex;
-        justify-content: space-around;
-        flex: 1;
+        justify-content: space-between;
+        width: 220px;
         align-items: center;
         margin-top: 0;
     }

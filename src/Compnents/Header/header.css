@@ -1,0 +1,102 @@
+.upper-section {
+    background-image: url(../images/image-hero-mobile.jpg);
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+
+}
+header {
+    max-width: 1200px;
+    padding: 1.5em;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    height: 1.5em;
+    cursor: pointer;
+}
+
+header .nav-toggle {
+    height: fit-content;
+    z-index: 40;
+}
+
+.nav-toggle img {
+    height: 1.5em;
+}
+
+header .nav-close {
+    display: none;
+}
+header .close .nav-close{
+    display: block;
+}
+
+header .close .nav-open{
+    display: none;
+}
+
+header nav {
+    z-index: 30;
+    box-shadow: 0 0 10px gray;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    top: 100%;
+    width: 90%;
+    left: 5%;
+    border-radius: 1em;
+    display: none;
+}
+
+header nav.active {
+    display: flex;
+}
+header a {
+    color: var(--black);
+    padding: 1.5em 1em;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--Dark-gray);
+}
+
+header a:last-of-type{
+    border: none;
+}
+
+@media (min-width:720px){
+    .upper-section {
+        background-image: url(../images/image-hero-desktop.jpg);
+        height: 40vh;
+    }
+    header nav {
+        position: static;
+        display: flex;
+        width: fit-content;
+        flex-direction: row;
+        height: fit-content;
+        background-color:transparent;
+        border-radius: 1em;
+        box-shadow: none;
+    }
+    header a {
+        position: relative;
+        border-bottom: none;
+        color: #fff;
+        font-weight: 800;
+        padding: 0;
+        margin-left: 2em;
+        transition: 250ms linear;
+    }
+    header .nav-toggle {
+        display: none;
+    }
+
+    header a:hover {
+        text-decoration: underline;
+    }
+}

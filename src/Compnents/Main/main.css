@@ -1,0 +1,127 @@
+.main-section {
+    transform: translateY(-20%);
+}
+.hero-intro {
+    padding-inline: 1em;
+}
+.hero-intro,
+.crwod-fund {
+    text-align: center;
+    margin: 1.5em;
+    box-shadow: 0 0 10px gray;
+    border-radius: 1em;
+    background-color: #fff;
+}
+
+.hero-intro {
+    padding-bottom: 1.5em;
+}
+
+.master-logo {
+    transform: translateY(-50%);
+}
+
+.hero-intro h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1em;
+}
+
+.hero-intro h2 {
+    font-size: 1rem;
+    margin-bottom: 1.5em;
+    color: var(--Dark-gray);
+}
+
+.purchase-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.purchase-btn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.purchase-btn span h4 {
+    padding: 1em 0.5em;
+    border-radius: 2em;
+    display: none;
+}
+
+.crwod-fund {
+    padding: 1em;
+}
+.funding div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-block: 1em;
+}
+.funding div::after {
+    content: '';
+    height: 1px;
+    width: 30%;
+    margin: 1em auto 0 auto; 
+    background-color: var(--Dark-gray);
+}
+.funding div strong {
+    font-size:2rem;
+}
+.funding div small {
+    font-size: 1rem;
+}
+
+.progress-bar {
+    position: relative;
+    height: 1em;
+    width: 100%;
+    background-color: rgb(179, 255, 223);
+    border-radius: 1em;
+    margin-block: 2em;
+}
+
+.progress-bar::after{
+    content: '';
+    position: absolute;
+    height: 1em;
+    width: 87%;
+    left: 0;
+    background-color: var(--Dark-cyan);
+    border-radius: 1em;
+}
+
+@media (min-width:720px) {
+    .main-section {
+        max-width: 750px;
+        margin-inline:auto;
+    }
+    .crwod-fund {
+        padding-inline:3em ;
+    }
+    .funding {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .funding div::after {
+        display: none;
+    }
+    #book-mark {
+        z-index: 30;
+        outline: 1px solid #fff;
+        border-radius: 50%;
+    }
+    .purchase-btn span h4 {
+        padding: 1em 0 1em 0.5em ;
+        border-radius: 2em;
+        display: block;
+        width: 150px;
+        transform: translateX(-20%);
+        color: var(--Dark-cyan);
+        font-weight: 800;
+        background-color: #e4fff9;
+        z-index: 20;
+    }
+}

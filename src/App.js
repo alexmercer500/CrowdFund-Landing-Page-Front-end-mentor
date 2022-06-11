@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Header from './Compnents/Header/Header';
+import Main from './Compnents/Main/Main';
+import Body from './Compnents/Body/Body';
+import Confirm from './Compnents/Confirm/Confirm';
+import Modal from './Compnents/Modal/Modal';
+
 
 function App() {
+  const [open, setOpen] = useState(false);
+  const [modalOpen, modalClose] = useState(false);
+
+
+  const modalToggle = () => {
+    modalClose(!modalOpen)
+  }
+
+  const sendOpen = () => {
+    setOpen(!open);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <button onClick={sendOpen}>open it</button>
+      <button onClick={modalToggle}>modal open</button> */}
+      <Header />
+      <Main modalToggle={modalToggle}/>
+      <Body sendOpen={sendOpen}/>
+      {open && <Confirm sendOpen={sendOpen} />}
+      {modalOpen && <Modal modalToggle={modalToggle} sendOpen={sendOpen}/>}
     </div>
   );
 }

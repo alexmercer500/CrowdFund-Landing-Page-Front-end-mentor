@@ -1,0 +1,183 @@
+.modal-container {
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+}
+.modal-box {
+    margin: 1em;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-head h1 {
+    font-size: 1.5rem;
+}
+
+.modal-head span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--Dark-gray);
+    cursor: pointer;
+}
+
+.modal-head span:hover {
+    color: #000;
+}
+
+.modal-box section {
+    color: var(--Dark-gray);
+    line-height: 1.5rem;
+    margin-block: 1.5em;
+}
+
+.section-content {
+    border: 1px solid var(--Dark-gray);
+    border-radius: 1em;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+.section-heading {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1em;
+
+}
+
+.section-content h1 {
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.section-content h2 {
+    font-size: 1rem;
+    width: 100%;
+    color: var(--Dark-cyan);
+}
+
+.section-bottom {
+    text-align: center;
+    padding: 1em;
+    border-top: 1px solid var(--Dark-gray);
+    display: none;
+}
+
+.section-content input:checked~.section-bottom {
+    display: block;
+}
+
+.section-content input:checked~* {
+    color: #000;
+    font-weight: 800;
+}
+
+.section-content input:checked .section-content {
+    border: 1px solid red;
+}
+
+.section-bottom span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.section-bottom input[type='number'] {
+    max-width: 100px;
+    padding: 0.75em;
+    border-radius: 2em;
+    border: 1px solid var(--Dark-gray);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.section-bottom button {
+    padding: 0.75em;
+    width: 100px;
+}
+
+.section-content label {
+    cursor: pointer;
+    /* border: 1px solid red; */
+    position: absolute;
+    inset: 0;
+}
+
+.section-content input:checked + label {
+    inset: 0 0 40% 0;
+}
+
+@media (min-width:720px) {
+    .modal-box {
+        max-width: 750px;
+        margin-inline: auto;
+        padding: 2em 2em 0.1em 2em;
+    }
+
+    .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .section-heading h1,
+    .section-heading h2 {
+        width: fit-content;
+        margin-bottom: 0;
+    }
+
+    .section-content section {
+        padding-inline: 1em;
+    }
+
+    .radio-box {
+        position: absolute;
+        left: 2%;
+        top: 30px;
+    }
+    .section-bottom {
+        text-align: left;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .section-bottom h4 {
+        flex: 2;
+    }
+    .section-bottom span {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+        align-items: center;
+        margin-top: 0;
+    }
+    .section-content input:checked~.section-bottom {
+        display: flex;
+    }
+    
+}
